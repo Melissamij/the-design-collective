@@ -1,0 +1,38 @@
+---
+layout: default
+team:
+  - name: Greg
+    bio: Big Boss Coder
+    description: Eligendi inventore, amet voluptas asperiores consequatur nemo aperiam quis repellendus animi iusto aliquam modi tempora!
+    profile_image: /images/ 
+  - name: Jane
+    bio: Big Boss Coder
+    description: Eligendi inventore, amet voluptas asperiores consequatur nemo aperiam quis repellendus animi iusto aliquam modi tempora!
+  - name: Lola
+    bio: Big Boss Coder
+    description: Eligendi inventore, amet voluptas asperiores consequatur nemo aperiam quis repellendus animi iusto aliquam modi tempora!
+
+---
+
+ <!--  Banner ------->
+ <section class="tall-50 grid">
+    <div class="col-5_sm-5 editable padded bg-green">
+         <h1>Meet our growing family </h1>
+         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias totam ea beatae quaerat earum, et vel commodi maxime laboriosam ducimus sint tenetur at quibusdam! Dolor non voluptas necessitatibus excepturi placeat?</p>
+        </div>
+        <div class="col-7_sm-7 bg-image bg-plant">
+        </div>
+</section>
+
+<section class="padded">
+ {% for person in page.team %}
+   <div class="grid">
+       <div class="col-5">
+           <img src="{{ person.profile_image }}">
+           <h3>{{ person.name }}</h3>
+           <p><strong>{{ person.bio }}</strong></p>
+           <p> {{ person.description }}</p>
+       </div>
+   </div>
+ {% endfor %}
+</section>
