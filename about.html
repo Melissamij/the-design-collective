@@ -1,16 +1,20 @@
 ---
 layout: default
+banner_image: /images/plant.jpg
 team:
-  - name: Greg
+  - name: Joseph
     bio: Big Boss Coder
     description: Eligendi inventore, amet voluptas asperiores consequatur nemo aperiam quis repellendus animi iusto aliquam modi tempora!
-    profile_image: /images/ 
-  - name: Jane
+    profile_image: /images/joseph.jpg
+  - name: Stephanie
     bio: Big Boss Coder
     description: Eligendi inventore, amet voluptas asperiores consequatur nemo aperiam quis repellendus animi iusto aliquam modi tempora!
+    profile_image: /images/stephanie.jpg
   - name: Lola
     bio: Big Boss Coder
     description: Eligendi inventore, amet voluptas asperiores consequatur nemo aperiam quis repellendus animi iusto aliquam modi tempora!
+    profile_image: /images/lola.jpg
+about-video-id: undefined
 
 ---
 
@@ -20,19 +24,35 @@ team:
          <h1>Meet our growing family </h1>
          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias totam ea beatae quaerat earum, et vel commodi maxime laboriosam ducimus sint tenetur at quibusdam! Dolor non voluptas necessitatibus excepturi placeat?</p>
         </div>
-        <div class="col-7_sm-7 bg-image bg-plant">
+        <div class="col-7_sm-7 bg-image bg-plant" style="background-image: url('{{ page.banner_image}}');;">
         </div>
 </section>
 
+<!------- Meet the team -->
 <section class="padded">
+  <div class="capped-width">
  {% for person in page.team %}
-   <div class="grid">
-       <div class="col-5">
-           <img src="{{ person.profile_image }}">
-           <h3>{{ person.name }}</h3>
-           <p><strong>{{ person.bio }}</strong></p>
-           <p> {{ person.description }}</p>
+   <div class="grid flex-flip-alternate">
+       <div class="col-5 padded-2">
+           <img src="{{ person.profile_image }}" class="profile-image">
+       </div>
+
+       <div class="col-7-middle padded-1">
+          <h3>Meet {{ person.name }}</h3>
+          <p><strong>{{ person.bio }}</strong></p>
+          <p> {{ person.description }}</p>
        </div>
    </div>
  {% endfor %}
+</div>
+</section> 
+
+<!-----------video ----- -->
+<section class="padded bg-green center">
+  <h2 class="editable">Watch our corny meet the team video</h2>
+  <p class="empasis editable">Featured j-bomb the terrier</p>
+  <div class="padded-1">
+    <div class='embed-container'><iframe src='https://www.youtube.com/embed/'{{ page.about-video-id }} frameborder='0' allowfullscreen></iframe>
+    </div>
+  </div>
 </section>
