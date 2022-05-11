@@ -1,7 +1,36 @@
 ---
 layout: default
+banner_image: /images/plant-2.jpg
 ---
 
-<section>
-    contact
+<!--  Banner ------->
+<section class="tall-50 grid">
+    <div class="col-7_sm-7 bg-image" style="background-image: url('{{ page.banner_image}}');;">
+    </div>
+    <div class="col-5_sm-5 editable padded bg-green">
+         <h1>Get in touch. </h1>
+         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias totam ea beatae quaerat earum, et vel commodi maxime laboriosam ducimus sint tenetur at quibusdam! Dolor non voluptas necessitatibus excepturi placeat?</p>
+        </div>   
+</section>
+
+<!-------- contact form-->
+<section class="padded capped-width">
+    <div class="center editable margin-b-2">
+        <h2>The personal touch</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo corporis, ratione tenetur, totam, iusto praesentium modi ullam necessitatibus distinctio nesciunt doloremque beatae. Ex aspernatur amet explicabo, mollitia laudantium corrupti voluptas.</p>
+    </div>
+
+<!---------- Simple Contact Form Elements  ------------->
+    <form>
+        <label for="_name"> Your Name </label>
+        <input type="text" name="_name" id="_name" placeholder="Name" />
+
+        <label for="_replyto"> Your Email </label>
+        <input type="email" name="_replyto" id="_replyto" placeholder="Email" />
+
+        <label for="message"> Tell me everything about you... </label>
+        <textarea name="message" id="message" placeholder="Hey I want to learn to code..."></textarea>
+
+        <button type="submit" class="button"> SUBMIT </button>
+    </form>
 </section>
