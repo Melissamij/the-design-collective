@@ -8,8 +8,8 @@ layout: default
         <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, odit beatae. Natus architecto quas a aperiam, explicabo, vel nesciunt veritatis odio commodi similique dolorem soluta velit? Tempore voluptatem a repellat?</p>
     </div>
 
-    {% for project in site.projects %}
-    <div class="col-7_sm-12-middle">
+    {% for project in site.projects limit:5 %} <!-- limit:5 limit to 5 portfolio on this page--->
+    <div class="col-7_sm-12-middle margin-b-2">
         <div class="bg-image landscape" style="background-image: url('{{project.featured_image}}')">
         </div>
     </div>
