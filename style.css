@@ -213,7 +213,10 @@ form .button {
     background-position: 75% 50%;}
 .bg-meeting{background-image: url('/images/meeting.jpg');}
 .bg-mockuo{background-image: url('/images/placeholder-project.png');}
-
+.right-arrow {
+    max-width: 2.5rem;
+    margin-left: 1rem;
+}
 /* --- Responsive video ---*/
 .embed-container { 
     position: relative; 
